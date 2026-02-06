@@ -1275,6 +1275,10 @@ a {
 #contact {
   padding: 80px 9%;
   background: #1f242d;
+  min-height: 40vh; /* Ajouté pour prendre toute la hauteur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement */
 }
 
 .MONcontact {
@@ -1309,11 +1313,15 @@ a {
   margin: 0 auto;
 }
 
+/* MODIFICATION PRINCIPALE ICI */
 #contact .items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex; /* Changé de grid à flex */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
   gap: 60px;
-  align-items: start;
+  width: 600%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 #contact .container {
@@ -1321,11 +1329,13 @@ a {
   padding: 40px;
   border-radius: 15px;
   border: 1px solid rgba(124, 240, 61, 0.2);
+  width: 100%;
+  max-width: 900px; /* Limite la largeur */
 }
 
 #contact .container h1 {
   color: #7cf03d;
-  font-size: 32px;
+  font-size: 40px;
   margin-bottom: 15px;
 }
 
@@ -1408,6 +1418,50 @@ textarea.interior {
     flex: 1;
 }
 
+/* Bouton d'envoi */
+.btn-sci {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background: linear-gradient(135deg, #7cf03d, #5cb800);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(124, 240, 61, 0.3);
+}
+
+/* Si tu veux garder la structure à deux colonnes mais centrer le tout */
+/* Solution alternative avec grid centré */
+/*
+#contact .items {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#contact .container {
+  width: 100%;
+  max-width: 600px;
+}
+*/
 /* Messages d'erreur */
 .error-message {
     display: block;
