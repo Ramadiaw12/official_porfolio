@@ -227,6 +227,8 @@ a {
 /* ==================== ABOUT SECTION ==================== */
 #about {
   padding: 80px 0;
+  background: #0a0a0a;
+  color: white;
 }
 
 .propos {
@@ -256,6 +258,202 @@ a {
   border-radius: 2px;
 }
 
+/* Conteneur des deux colonnes */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 0 20px;
+  align-items: start;
+}
+
+/* Style commun pour les deux colonnes */
+.about-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titres des colonnes */
+.column-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #7cf03d;
+  margin-bottom: 1.5rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(124, 240, 61, 0.3);
+  position: relative;
+}
+
+.column-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: #7cf03d;
+}
+
+/* Section Qui suis-je */
+.qui-suis-je .presentation-text {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(124, 240, 61, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.presentation-text p {
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.presentation-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Formation */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(124, 240, 61, 0.1);
+  transition: all 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(124, 240, 61, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.education-header {
+  background: rgba(124, 240, 61, 0.1);
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(124, 240, 61, 0.2);
+}
+
+.annees {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7cf03d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.education-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.education-content {
+  padding: 1.5rem;
+}
+
+.education-content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #7cf03d;
+  margin-bottom: 0.5rem;
+}
+
+.adresschool {
+  color: #aaa;
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.monparcours {
+  color: #d0d0d0;
+  line-height: 1.7;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Séparateur entre les formations */
+.education-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 800px;
+  }
+  
+  .propos h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    gap: 2.5rem;
+    padding: 0 15px;
+  }
+  
+  .column-title {
+    font-size: 24px;
+  }
+  
+  .qui-suis-je .presentation-text {
+    padding: 1.5rem;
+  }
+  
+  .education-header,
+  .education-content {
+    padding: 1.2rem;
+  }
+  
+  .propos {
+    padding: 40px 0 20px;
+  }
+  
+  #about {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .propos h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+  
+  .column-title {
+    font-size: 22px;
+  }
+  
+  .presentation-text p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .education-header h3 {
+    font-size: 16px;
+  }
+  
+  .education-content h2 {
+    font-size: 18px;
+  }
+}
 /* ==================== EDUCATION ==================== */
 .education {
   max-width: 1200px;
