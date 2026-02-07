@@ -122,7 +122,7 @@ a {
 
 .home-info .btn-sci {
   display: flex;
-  align-items: center;
+
   gap: 20px;
   margin-top: 30px;
 }
@@ -1445,23 +1445,7 @@ textarea.interior {
   box-shadow: 0 10px 20px rgba(124, 240, 61, 0.3);
 }
 
-/* Si tu veux garder la structure à deux colonnes mais centrer le tout */
-/* Solution alternative avec grid centré */
-/*
-#contact .items {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  gap: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-#contact .container {
-  width: 100%;
-  max-width: 600px;
-}
-*/
 /* Messages d'erreur */
 .error-message {
     display: block;
@@ -1908,9 +1892,10 @@ textarea.interior {
 
 .footer-content h3 {
   color: #7cf03d;
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 40px;
   font-weight: 600;
+  
 }
 
 .contact-grid {
@@ -2032,4 +2017,755 @@ textarea.interior {
   opacity: 0.8;
 }
 
-/* ==================== RESPONSIVE SKILLS ==================== */
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+
+/* Tablets et petits écrans (1024px et moins) */
+@media (max-width: 1024px) {
+  /* Navigation */
+  .navbar {
+    padding: 20px 5%;
+  }
+  
+  /* Home Section */
+  .home {
+    padding: 100px 5% 60px;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .home-info h1 {
+    font-size: 42px;
+  }
+  
+  .home-info h2 {
+    font-size: 28px;
+  }
+  
+  .home-img .img-box {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .home-img .img-box::before,
+  .home-img .img-box::after {
+    width: 400px;
+    height: 400px;
+  }
+  
+  /* About Section */
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 700px;
+  }
+  
+  /* Education */
+  .education .container > div {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .div-ligne-pointillee {
+    display: none;
+  }
+  
+  /* Portfolio Carousel */
+  .certifications-carousel {
+    padding: 0 40px;
+  }
+  
+  .carousel-track {
+    height: 500px;
+  }
+  
+  .certification-image {
+    height: 300px;
+  }
+  
+  /* Projects */
+  #projects .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Contact */
+  #contact .items {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  #contact .container {
+    max-width: 100%;
+  }
+}
+
+/* Tablettes (768px et moins) */
+@media (max-width: 768px) {
+  /* Navigation */
+  .navbar ul {
+    gap: 20px;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+  }
+  
+  /* Home Section */
+  .home-info h1 {
+    font-size: 36px;
+  }
+  
+  .home-info h2 {
+    font-size: 24px;
+  }
+  
+  .home-info p {
+    font-size: 16px;
+  }
+  
+  .home-img .img-box {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .home-img .img-box::before,
+  .home-img .img-box::after {
+    width: 340px;
+    height: 340px;
+  }
+  
+  .btn {
+    padding: 10px 28px;
+    font-size: 14px;
+  }
+  
+  /* Sections communes */
+  #about, #portfolio, #projects, #contact, .skills, .certifications, .education {
+    padding: 60px 5%;
+  }
+  
+  /* Titres */
+  .MONcontact h1, .propos h1, .portfolio-header h1, 
+  #projects h1, .skills-title, .certifications h1,
+  .education > div:first-child h1 {
+    font-size: 36px;
+  }
+  
+  /* About */
+  .column-title {
+    font-size: 24px;
+  }
+  
+  /* Education */
+  .annees {
+    font-size: 26px;
+  }
+  
+  /* Portfolio Carousel */
+  .certifications-carousel {
+    padding: 0 30px;
+  }
+  
+  .carousel-track {
+    height: 450px;
+  }
+  
+  .certification-image {
+    height: 250px;
+  }
+  
+  .carousel-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  
+  .prev-btn {
+    left: -10px;
+  }
+  
+  .next-btn {
+    right: -10px;
+  }
+  
+  /* Modal */
+  .prev, .next {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    padding: 12px;
+  }
+  
+  .close {
+    font-size: 36px;
+    width: 40px;
+    height: 40px;
+  }
+
+
+
+  /* RESPONSIVE CERTIF */
+  /* ==================== CERTIFICATIONS RESPONSIVE ==================== */
+
+/* Pour les tablettes et petits écrans */
+@media (max-width: 1024px) {
+  .certifications {
+    padding: 60px 5%;
+  }
+  
+  .cert-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .cert-image {
+    height: 200px;
+  }
+  
+  .cert-title {
+    font-size: 16px;
+  }
+  
+  .cert-issuer {
+    font-size: 14px;
+  }
+  
+  .cert-date {
+    font-size: 12px;
+  }
+}
+
+/* Pour les tablettes (768px et moins) */
+@media (max-width: 768px) {
+  .certifications {
+    padding: 50px 4%;
+  }
+  
+  .certifications h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .certifications h1::after {
+    width: 80px;
+    height: 3px;
+    bottom: -12px;
+  }
+  
+  .cert-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .cert-item {
+    padding: 15px;
+  }
+  
+  .cert-image {
+    height: 180px;
+    margin-bottom: 10px;
+  }
+  
+  .cert-image::after {
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .cert-title {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  
+  .cert-issuer {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  
+  .cert-date {
+    font-size: 11px;
+  }
+}
+
+/* Pour les mobiles (480px et moins) */
+@media (max-width: 480px) {
+  .certifications {
+    padding: 40px 15px;
+  }
+  
+  .certifications h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 350px;
+    margin: 30px auto 0;
+  }
+  
+  .cert-item {
+    padding: 20px;
+  }
+  
+  .cert-image {
+    height: 200px;
+  }
+  
+  .cert-title {
+    font-size: 16px;
+  }
+  
+  .cert-issuer {
+    font-size: 14px;
+  }
+  
+  .cert-date {
+    font-size: 12px;
+  }
+}
+
+/* Pour les très petits mobiles (360px et moins) */
+@media (max-width: 360px) {
+  .certifications {
+    padding: 40px 10px;
+  }
+  
+  .certifications h1 {
+    font-size: 24px;
+  }
+  
+  .cert-grid {
+    max-width: 300px;
+  }
+  
+  .cert-image {
+    height: 160px;
+  }
+  
+  .cert-title {
+    font-size: 15px;
+  }
+  
+  .cert-issuer {
+    font-size: 13px;
+  }
+  
+  .cert-date {
+    font-size: 11px;
+  }
+}
+
+/* Pour l'orientation paysage sur mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .certifications {
+    padding: 30px 5%;
+  }
+  
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .cert-image {
+    height: 150px;
+  }
+  
+  .cert-title {
+    font-size: 14px;
+  }
+  
+  .cert-issuer, .cert-date {
+    font-size: 11px;
+  }
+}
+
+/* Correction pour la grille en mode paysage tablette */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .cert-image {
+    height: 180px;
+  }
+}
+
+
+
+
+  /* Projects */
+  #projects .p-6 {
+    padding: 20px;
+  }
+  
+  /* Contact */
+  #contact .container {
+    padding: 30px;
+  }
+  
+  #contact .container h1 {
+    font-size: 32px;
+  }
+  
+  /* Skills */
+  .skills-group h3 {
+    font-size: 24px;
+  }
+  
+  .skill-card {
+    padding: 25px 15px;
+  }
+  
+  .skill-card i {
+    font-size: 40px;
+  }
+  
+  /* Footer */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .animated-footer {
+    padding: 40px 15px 20px;
+  }
+}
+
+/* Mobiles (480px et moins) */
+@media (max-width: 480px) {
+  /* Navigation */
+  .navbar {
+    padding: 15px 4%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .navbar ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Home Section */
+  .home-info h1 {
+    font-size: 30px;
+  }
+  
+  .home-info h2 {
+    font-size: 20px;
+  }
+  
+  .home-info p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .home-img .img-box {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .home-img .img-box::before,
+  .home-img .img-box::after {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .home-info .btn-sci {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sci {
+    justify-content: center;
+  }
+  
+  /* Sections communes */
+  #about, #portfolio, #projects, #contact, .skills, .certifications, .education {
+    padding: 40px 4%;
+  }
+  
+  /* Titres */
+  .MONcontact h1, .propos h1, .portfolio-header h1, 
+  #projects h1, .skills-title, .certifications h1,
+  .education > div:first-child h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+  
+  .MONcontact h1::after, .propos h1::after, .portfolio-header h1::after,
+  #projects h1::after, .skills-title::after, .certifications h1::after,
+  .education > div:first-child h1::after {
+    width: 80px;
+    height: 3px;
+  }
+  
+  /* About */
+  .about-container {
+    padding: 0 10px;
+    gap: 30px;
+  }
+  
+  .qui-suis-je .presentation-text {
+    padding: 20px;
+  }
+  
+  .presentation-text p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .education-header, .education-content {
+    padding: 15px;
+  }
+  
+  /* Education */
+  .annees {
+    font-size: 22px;
+  }
+  
+  .education .container > div > div:last-child h2 {
+    font-size: 20px;
+  }
+  
+  .monparcours {
+    font-size: 15px;
+  }
+  
+  /* Portfolio Carousel */
+  .certifications-carousel {
+    padding: 0 20px;
+  }
+  
+  .carousel-track {
+    height: 400px;
+  }
+  
+  .certification-slide {
+    padding: 20px 15px;
+  }
+  
+  .certification-image {
+    height: 200px;
+  }
+  
+  .certification-title {
+    font-size: 18px;
+  }
+  
+  .certification-desc {
+    font-size: 14px;
+  }
+  
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  /* Modal */
+  .modal-content {
+    max-width: 95%;
+  }
+  
+  .prev, .next {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    padding: 10px;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .close {
+    top: -30px;
+    font-size: 28px;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .counter {
+    font-size: 14px;
+    padding: 10px 20px;
+    bottom: 20px;
+  }
+  
+  /* Projects */
+  #projects .grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  #projects .p-6 {
+    padding: 15px;
+  }
+  
+  #projects h5 {
+    font-size: 18px;
+  }
+  
+  /* Contact */
+  #contact .container {
+    padding: 25px;
+  }
+  
+  #contact .container h1 {
+    font-size: 26px;
+  }
+  
+  .interior {
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+  
+  .checkbox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .checkbox label {
+    font-size: 13px;
+  }
+  
+  .btn {
+    padding: 14px 30px;
+    font-size: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .skill-card {
+    padding: 20px 10px;
+  }
+  
+  .skill-card i {
+    font-size: 36px;
+  }
+  
+  .skill-card span {
+    font-size: 14px;
+  }
+  
+  .soft-skills-minimal {
+    padding: 20px;
+  }
+  
+  .soft-skill-mini {
+    min-width: 100px;
+    padding: 12px;
+  }
+  
+  .soft-skill-mini i {
+    font-size: 28px;
+  }
+  
+  /* Footer */
+  .contact-card {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  .footer-content h3 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Très petits mobiles (360px et moins) */
+@media (max-width: 360px) {
+  .home-info h1 {
+    font-size: 26px;
+  }
+  
+  .home-info h2 {
+    font-size: 18px;
+  }
+  
+  .home-img .img-box {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .home-img .img-box::before,
+  .home-img .img-box::after {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certification-image {
+    height: 180px;
+  }
+  
+  .carousel-track {
+    height: 380px;
+  }
+}
+
+/* Orientation paysage sur mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .home {
+    min-height: auto;
+    padding: 120px 5% 40px;
+  }
+  
+  .home-info h1 {
+    font-size: 32px;
+  }
+  
+  .home-info h2 {
+    font-size: 20px;
+  }
+  
+  .home-img .img-box {
+    width: 200px;
+    height: 200px;
+  }
+  
+  #contact {
+    min-height: auto;
+    padding: 40px 5%;
+  }
+  
+  #portfolio {
+    min-height: auto;
+    padding: 40px 5%;
+  }
+}
+
+/* Correction pour éviter le débordement horizontal */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
