@@ -2018,6 +2018,7 @@ textarea.interior {
 }
 
 /* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
 
 /* Tablets et petits écrans (1024px et moins) */
 @media (max-width: 1024px) {
@@ -2103,6 +2104,32 @@ textarea.interior {
   
   #contact .container {
     max-width: 100%;
+  }
+  
+  /* Certifications Responsive */
+  .certifications {
+    padding: 60px 5%;
+  }
+  
+  .cert-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .cert-image {
+    height: 200px;
+  }
+  
+  .cert-title {
+    font-size: 16px;
+  }
+  
+  .cert-issuer {
+    font-size: 14px;
+  }
+  
+  .cert-date {
+    font-size: 12px;
   }
 }
 
@@ -2208,42 +2235,44 @@ textarea.interior {
     width: 40px;
     height: 40px;
   }
-
-
-
-  /* RESPONSIVE CERTIF */
-  /* ==================== CERTIFICATIONS RESPONSIVE ==================== */
-
-/* Pour les tablettes et petits écrans */
-@media (max-width: 1024px) {
-  .certifications {
-    padding: 60px 5%;
+  
+  /* Projects */
+  #projects .p-6 {
+    padding: 20px;
   }
   
-  .cert-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+  /* Contact */
+  #contact .container {
+    padding: 30px;
   }
   
-  .cert-image {
-    height: 200px;
+  #contact .container h1 {
+    font-size: 32px;
   }
   
-  .cert-title {
-    font-size: 16px;
+  /* Skills */
+  .skills-group h3 {
+    font-size: 24px;
   }
   
-  .cert-issuer {
-    font-size: 14px;
+  .skill-card {
+    padding: 25px 15px;
   }
   
-  .cert-date {
-    font-size: 12px;
+  .skill-card i {
+    font-size: 40px;
   }
-}
-
-/* Pour les tablettes (768px et moins) */
-@media (max-width: 768px) {
+  
+  /* Footer */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .animated-footer {
+    padding: 40px 15px 20px;
+  }
+  
+  /* Certifications */
   .certifications {
     padding: 50px 4%;
   }
@@ -2292,152 +2321,6 @@ textarea.interior {
   
   .cert-date {
     font-size: 11px;
-  }
-}
-
-/* Pour les mobiles (480px et moins) */
-@media (max-width: 480px) {
-  .certifications {
-    padding: 40px 15px;
-  }
-  
-  .certifications h1 {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-  
-  .cert-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 350px;
-    margin: 30px auto 0;
-  }
-  
-  .cert-item {
-    padding: 20px;
-  }
-  
-  .cert-image {
-    height: 200px;
-  }
-  
-  .cert-title {
-    font-size: 16px;
-  }
-  
-  .cert-issuer {
-    font-size: 14px;
-  }
-  
-  .cert-date {
-    font-size: 12px;
-  }
-}
-
-/* Pour les très petits mobiles (360px et moins) */
-@media (max-width: 360px) {
-  .certifications {
-    padding: 40px 10px;
-  }
-  
-  .certifications h1 {
-    font-size: 24px;
-  }
-  
-  .cert-grid {
-    max-width: 300px;
-  }
-  
-  .cert-image {
-    height: 160px;
-  }
-  
-  .cert-title {
-    font-size: 15px;
-  }
-  
-  .cert-issuer {
-    font-size: 13px;
-  }
-  
-  .cert-date {
-    font-size: 11px;
-  }
-}
-
-/* Pour l'orientation paysage sur mobile */
-@media (max-height: 600px) and (orientation: landscape) {
-  .certifications {
-    padding: 30px 5%;
-  }
-  
-  .cert-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  
-  .cert-image {
-    height: 150px;
-  }
-  
-  .cert-title {
-    font-size: 14px;
-  }
-  
-  .cert-issuer, .cert-date {
-    font-size: 11px;
-  }
-}
-
-/* Correction pour la grille en mode paysage tablette */
-@media (max-width: 1024px) and (orientation: landscape) {
-  .cert-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .cert-image {
-    height: 180px;
-  }
-}
-
-
-
-
-  /* Projects */
-  #projects .p-6 {
-    padding: 20px;
-  }
-  
-  /* Contact */
-  #contact .container {
-    padding: 30px;
-  }
-  
-  #contact .container h1 {
-    font-size: 32px;
-  }
-  
-  /* Skills */
-  .skills-group h3 {
-    font-size: 24px;
-  }
-  
-  .skill-card {
-    padding: 25px 15px;
-  }
-  
-  .skill-card i {
-    font-size: 40px;
-  }
-  
-  /* Footer */
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .animated-footer {
-    padding: 40px 15px 20px;
   }
 }
 
@@ -2697,6 +2580,43 @@ textarea.interior {
     font-size: 26px;
     margin-bottom: 30px;
   }
+  
+  /* Certifications */
+  .certifications {
+    padding: 40px 15px;
+  }
+  
+  .certifications h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 350px;
+    margin: 30px auto 0;
+  }
+  
+  .cert-item {
+    padding: 20px;
+  }
+  
+  .cert-image {
+    height: 200px;
+  }
+  
+  .cert-title {
+    font-size: 16px;
+  }
+  
+  .cert-issuer {
+    font-size: 14px;
+  }
+  
+  .cert-date {
+    font-size: 12px;
+  }
 }
 
 /* Très petits mobiles (360px et moins) */
@@ -2731,6 +2651,34 @@ textarea.interior {
   .carousel-track {
     height: 380px;
   }
+  
+  .certifications {
+    padding: 40px 10px;
+  }
+  
+  .certifications h1 {
+    font-size: 24px;
+  }
+  
+  .cert-grid {
+    max-width: 300px;
+  }
+  
+  .cert-image {
+    height: 160px;
+  }
+  
+  .cert-title {
+    font-size: 15px;
+  }
+  
+  .cert-issuer {
+    font-size: 13px;
+  }
+  
+  .cert-date {
+    font-size: 11px;
+  }
 }
 
 /* Orientation paysage sur mobile */
@@ -2761,6 +2709,39 @@ textarea.interior {
   #portfolio {
     min-height: auto;
     padding: 40px 5%;
+  }
+  
+  .certifications {
+    padding: 30px 5%;
+  }
+  
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .cert-image {
+    height: 150px;
+  }
+  
+  .cert-title {
+    font-size: 14px;
+  }
+  
+  .cert-issuer, .cert-date {
+    font-size: 11px;
+  }
+}
+
+/* Correction pour la grille en mode paysage tablette */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .cert-image {
+    height: 180px;
   }
 }
 
