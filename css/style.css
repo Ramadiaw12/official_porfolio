@@ -2018,11 +2018,10 @@ textarea.interior {
 }
 
 /* ==================== RESPONSIVE MEDIA QUERIES ==================== */
-/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
 
 /* Tablets et petits écrans (1024px et moins) */
 @media (max-width: 1024px) {
-  /* Navigation */
+  
   .navbar {
     padding: 20px 5%;
   }
@@ -2680,59 +2679,105 @@ textarea.interior {
     font-size: 11px;
   }
 }
-
-/* Orientation paysage sur mobile */
-@media (max-height: 600px) and (orientation: landscape) {
-  .home {
-    min-height: auto;
-    padding: 120px 5% 40px;
-  }
-  
+/* iPhone X, 11, 12, 13, 14 (375px - 390px) */
+@media (max-width: 390px) {
   .home-info h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
   
   .home-info h2 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  
+  .home-info p {
+    font-size: 14px;
+    line-height: 1.5;
   }
   
   .home-img .img-box {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
   
-  #contact {
-    min-height: auto;
-    padding: 40px 5%;
+  .section-title {
+    font-size: 26px;
   }
   
-  #portfolio {
-    min-height: auto;
-    padding: 40px 5%;
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   
-  .certifications {
-    padding: 30px 5%;
+  .skill-card {
+    padding: 15px 10px;
+  }
+  
+  .skill-card i {
+    font-size: 28px;
+  }
+  
+  .skill-card span {
+    font-size: 12px;
   }
   
   .cert-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: 1fr;
   }
   
   .cert-image {
-    height: 150px;
+    height: 160px;
   }
   
-  .cert-title {
-    font-size: 14px;
-  }
-  
-  .cert-issuer, .cert-date {
-    font-size: 11px;
+  #projects .grid {
+    grid-template-columns: 1fr;
   }
 }
 
+/* Très petits écrans (moins de 360px) */
+@media (max-width: 360px) {
+  .home-info h1 {
+    font-size: 24px;
+  }
+  
+  .home-img .img-box {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .btn {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+  
+  .sci a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+/* iPhone X spécifique (375px) */
+@media (max-width: 375px) {
+  .navbar ul {
+    gap: 12px;
+  }
+  
+  .navbar ul li a {
+    font-size: 13px;
+  }
+  
+  .home {
+    padding: 100px 4% 40px;
+  }
+  
+  .certification-image {
+    height: 180px;
+  }
+  
+  .contact-card {
+    padding: 15px;
+  }
+}
 /* Correction pour la grille en mode paysage tablette */
 @media (max-width: 1024px) and (orientation: landscape) {
   .cert-grid {
