@@ -1857,11 +1857,35 @@ textarea.interior {
   .monparcours { font-size: 15px; }
 
   /* Carousel */
-  .certifications-carousel { padding: 0 20px; }
-  .carousel-track { height: 400px; }
-  .certification-slide { padding: 20px 15px; }
-  .certification-image { height: 200px; }
-  .carousel-btn { width: 40px; height: 40px; font-size: 20px; }
+  .certifications-carousel {
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .carousel-container {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .carousel-track { height: auto; min-height: 380px; }
+  .certification-slide {
+    padding: 15px 10px;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  .certification-image {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+  }
+  .certification-info {
+    width: 100%;
+    padding: 12px;
+  }
+  .certification-title { font-size: 15px; }
+  .certification-desc { font-size: 13px; }
+  .carousel-btn { width: 36px; height: 36px; font-size: 18px; }
+  .prev-btn { left: 4px; }
+  .next-btn { right: 4px; }
 
   /* Modal */
   .modal-content { max-width: 95%; }
@@ -1906,16 +1930,28 @@ textarea.interior {
   .card-content { text-align: center; }
 
   /* Certifications */
-  .certifications { padding: 40px 15px; }
+  .certifications { padding: 40px 4%; }
   .certifications h1 { font-size: 28px; margin-bottom: 30px; }
   .cert-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 350px;
-    margin: 30px auto 0;
+    gap: 15px;
+    max-width: 100%;
+    margin: 30px 0 0;
   }
-  .cert-item { padding: 20px; }
-  .cert-image { height: 200px; }
+  .cert-item {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cert-image {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 12px;
+  }
+  .cert-title { font-size: 15px; text-align: center; }
+  .cert-issuer { font-size: 13px; text-align: center; }
+  .cert-date { font-size: 11px; text-align: center; }
 }
 
 /* ── xs : 375px ─────────────────────────────────────────── */
@@ -1952,6 +1988,9 @@ textarea.interior {
   .skills-grid { grid-template-columns: 1fr; }
 
   /* Certifications */
-  .cert-grid { max-width: 300px; }
-  .cert-image { height: 160px; }
+  .cert-grid { max-width: 100%; }
+  .cert-item { padding: 12px; }
+  .cert-image { height: 140px; }
+  .cert-title { font-size: 13px; }
+  .cert-issuer { font-size: 11px; }
 }
